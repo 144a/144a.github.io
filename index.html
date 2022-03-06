@@ -132,23 +132,22 @@
     </div>
     <div class="project">
       <div class="project__img-container">
-                                  <img class="project__img" src="img/vision.png" alt="Product Vision Inspection System Screenshot">
+                                  <img class="project__img" src="img/circle.png" alt="Product Vision Inspection System Screenshot">
       </div>
       <div class="project__details">
         <h2 class="project__name">
-          Product Vision Inspection System
+          Circular Times Table Visualization
         </h2>
         <div class="skill-tags">
-            <div class="skill-tag">OpenCV</div>
-            <div class="skill-tag">Python</div>
-            <div class="skill-tag">C++</div>
-            <div class="skill-tag">Raspberry Pi</div>
-            <div class="skill-tag">Numpy</div>
+            <div class="skill-tag">Processing</div>
+            <div class="skill-tag">Java</div>
+            <div class="skill-tag">Assembly</div>
+            <div class="skill-tag">Texas Instruments Basic</div>
         </div>
         <p>
-          Designed and developed a vision system to determine the quality and physical placement of a strip relative to the empty space on a card.
+          A program produced for a final assignment that visualizes a simple mathematical demonstration of the multiplication tables and how truly simple math can produce amazing and complex results. We start out by making a circle and dividing a number of points such that they are dispersed equally on the circumference. If one is to take the times table of a number to a much larger number (let’s say, 75) and project the translation of the starting number and the resulting number on the corresponding points (using the remainder for numbers that are larger than the number of dots), we will get different, complex patterns. This can be done with relative ease, with only 4 trigonometric functions per line calculation (a total of 300 per frame). However, depending on the size of the numbers, this will decrease accuracy (as most of the inputs are handled as 8 bit integers, with the exception of temporary numbers and angles, which are handled as 16 bit floating point numbers). The number of calculations per frame is decreased from the C code, from which the program was prototyped, by breaking apart the coordinate calculations. This involved generalizing many aspects of the math, making the flow of the program a bit harder to understand. There was also extensive use of the stack to help keep track of the order of certain subroutines and operations, as well as using the BC register to hold the 16 bit numbers needed for the Sine and Cosine subroutines. However, for this program to take full advantage of the z80, I would need to rewrite a large component of the trigonometric subroutines to accept very large integers, such that the need for a 16 bit floating point operations could be reduced and possibly eliminated. There also is a need to reset the bus wait time (of which I do not know the memory address), as such any basic routines will be slower than normal (if they interact with VRAM).
           <div>
-            <a class="btn" href="https://github.com/144a/BlueLineDetect" target="_blank">View Project</a>
+            <a class="btn" href="https://github.com/144a/Circular-Times-Table-Generator" target="_blank">View Project</a>
           </div>
         </p>
       </div>
